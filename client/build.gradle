@@ -1,0 +1,17 @@
+apply plugin: 'com.moowork.node'
+
+buildscript {
+    repositories {
+        maven { url "https://plugins.gradle.org/m2/" }
+    }
+    dependencies {
+        classpath "com.moowork.gradle:gradle-node-plugin:1.2.0"
+    }
+}
+
+node {
+    distBaseUrl = 'https://nodejs.org/dist'
+    download = true
+    workDir = file('.')
+    nodeModulesDir = file('.')
+}

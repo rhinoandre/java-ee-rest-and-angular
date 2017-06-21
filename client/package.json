@@ -1,0 +1,23 @@
+{
+  "name": "sample-app",
+  "version": "1.0.0",
+  "scripts": {
+    "test": "echo \"Error: tests weren't implemented yet.\" && exit 1",
+    "start": "webpack-dev-server --port 8081",
+    "build:prod": "webpack -p"
+  },
+  "dependencies": {
+    "angular": "^1.6.4",
+    "angular-route": "^1.6.4"
+  },
+  "devDependencies": {
+    "webpack": "^3.0.0",
+    "webpack-dev-server": "^2.5.0",
+    "jasmine-core": "^2.6.3",
+    "karma": "^1.7.0",
+    "karma-jasmine": "^1.1.0",
+    "karma-chrome-launcher": "^2.1.1",
+    "karma-coverage": "^1.1.1",
+    "karma-html-reporter": "^0.2.7"
+  }
+}
