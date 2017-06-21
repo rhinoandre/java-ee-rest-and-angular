@@ -13,3 +13,4 @@ _\( managed using [todo-md](https://github.com/Hypercubed/todo-md) \)_
 - [ ] Add Spring core to handle dependency injection
 - [ ] Add Spring Security to handle authentication/authorization (jwt)
 - [ ] Make readme.md to instruct developers regarding how to run the code and how to play with it
+- [ ] Add .travis.yml
