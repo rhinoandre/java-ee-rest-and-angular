@@ -1,17 +1,19 @@
 angular
     .module('app')
-    .factory('productService', ['productApi', function productService(productApi) {
+    .factory('productService', ['product', function productService(product) {
 
         function listProducts() {
-            return productApi.listProducts().then(function onListProducts(response) {
-                return response.data;
-            });
+            return product.query().$promise.then(
+                function onSuccessProductQuery(response) {
+                    return response;
+                });
         }
 
         function getProduct(productId) {
-            return productApi.getProduct(productId).then(function onGetProduct(response) {
-                return response.data;
-            });
+            return product.get({'productId':productId}).$promise.then(
+                function onSuccessProductGet(response) {
+                    return response;
+                });
         }
 
         return {

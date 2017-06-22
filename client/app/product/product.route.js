@@ -14,8 +14,8 @@ angular
             'templateUrl': 'app/product/details/product-details.html',
             'controller': 'productDetailsController',
             'resolve': {
-                product: ['productService', '$routeParams', function resolveProduct (productService, $routeParams) {
-                    return productService.getProduct($routeParams.productId);
+                product: ['productService', '$route', function resolveProduct (productService, $route) {
+                    return productService.getProduct($route.current.params.productId);
                 }]
             }
         });
