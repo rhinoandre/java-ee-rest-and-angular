@@ -1,11 +1,17 @@
-productApi.$inject = ['$http', 'baseApi'];
-export default function productApi($http, baseApi) {
+angular
+    .module('app')
+    .factory('productApi', ['$http', 'config', function productApi($http, config) {
 
-    this.listProducts = function() {
-        return $http.get(baseApi.BASE_PATH + 'product');
-    };
+        function listProducts() {
+            return $http.get(config.SERVER_PATH + 'product');
+        }
 
-    this.getProduct = function(productId) {
-        return $http.get(baseApi.BASE_PATH + 'product/' + productId);
-    };
-}
+        function getProduct(productId) {
+            return $http.get(config.SERVER_PATH + 'product/' + productId);
+        }
+
+        return {
+            listProducts: listProducts,
+            getProduct: getProduct
+        };
+    }]);

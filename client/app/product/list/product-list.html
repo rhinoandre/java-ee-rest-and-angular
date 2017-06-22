@@ -1,0 +1,10 @@
+<md-card ng-repeat="product in products">
+    <md-card-content>
+        <h2>{{product.name}}</h2>
+        <p>{{product.description}}</p>
+        <a ng-href="#/product/{{product.id}}">Details</a>
+    </md-card-content>
+    <md-card-footer>
+        {{product.price}}
+    </md-card-footer>
+</md-card>
