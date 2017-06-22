@@ -13,12 +13,12 @@ public class ProductService {
     public List<Product> list() {
         LOG.debug("Listing products");
         return Arrays.asList(
-                new Product("Product 1"),
-                new Product("Product 2"));
+                new Product(1, "Product 1", "Lorem Ipsum", 12.5),
+                new Product(2, "Product 2", "Lorem Ipsum", 10.5));
     }
 
     public Product get(String productId) {
         LOG.debug("Getting product with id: " + productId);
-        return new Product("product 1");
+        return new Product(1, "Product 1", "Lorem Ipsum", 12.5);
     }
 }
