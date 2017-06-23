@@ -1,5 +1,7 @@
+function productDetailsController($scope, product) {
+        $scope.product = product;
+    }
+
 angular
     .module('app')
-    .controller('productDetailsController', ['$scope', 'product', function productDetailsController($scope, product) {
-        $scope.product = product;
-    }]);
+    .controller('productDetailsController', ['$scope', 'product', productDetailsController]);

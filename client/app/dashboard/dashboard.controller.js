@@ -1,4 +1,3 @@
-angular
-    .module('app')
-    .controller('dashboardController', ['$scope', function dashboardController($scope) {
-    }]);
+export default function dashboardController() {
+    console.log('Test');
+};

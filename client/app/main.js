@@ -1,10 +1,12 @@
 import angular from 'angular';
-import ngRoute from 'angular-route';
+import uiRoute from 'angular-ui-route';
 import ngMaterial from 'angular-material';
 import ngResource from 'angular-resource';
 
+import 'dashboard'
+
 angular.module('app', [
-  ngRoute,
+  uiRoute,
   ngMaterial,
   ngResource
 ]);

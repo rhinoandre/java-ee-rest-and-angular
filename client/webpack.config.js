@@ -1,7 +1,7 @@
 const path = require('path');
 
 module.exports = {
-  entry: 'multi-entry-loader!',
+  entry: './app/main',
   output: {
     path: path.resolve(__dirname, 'dist'),
     publicPath: '/dist',
@@ -10,10 +10,11 @@ module.exports = {
   module: {
     loaders: [
       {
-        loader: 'multi-entry-loader',
+        test: /\.js$/,
+        exclude: /node_modules/,
+        loader: 'ng-annotate-loader!babel-loader',
         query: {
-          include: ['./app/*.js','./app/**/*.js'],
-          exclude: './app/**/*spec.js'
+          stage: 0
         }
       }
     ]

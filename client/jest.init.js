@@ -1,2 +1,2 @@
-require('angular');
-require('angular-mocks');
+import './app/main';
+import 'angular-mocks';

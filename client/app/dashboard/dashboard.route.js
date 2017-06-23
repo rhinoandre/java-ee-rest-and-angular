@@ -1,9 +1,9 @@
-angular
-    .module('app')
-    .config(['$routeProvider', function productRouteConfig($routeProvider) {
-        $routeProvider.when('/dashboard', {
-            'templateUrl': 'app/dashboard/dashboard.html',
-            'controller': 'dashboardController',
-            'controllerAs': 'dashboard'
-        });
-    }]);
+export default function productRouteConfig($stateProvider) {
+    $stateProvider
+    .state('home', {
+        url: '/dashboard',
+        templateUrl: 'app/dashboard/dashboard.html',
+        controller: 'dashboardController',
+        controllerAs: 'dashboardCtrl'
+    });
+}
