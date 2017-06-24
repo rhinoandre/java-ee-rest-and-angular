@@ -1,7 +1,5 @@
-function productDetailsController($scope, product) {
-        $scope.product = product;
+export default class ProductDetailsController {
+    constructor(product) {
+        this.product = product;
     }
-
-angular
-    .module('app')
-    .controller('productDetailsController', ['$scope', 'product', productDetailsController]);
+}

@@ -11,11 +11,11 @@ module.exports = {
     loaders: [
       {
         test: /\.js$/,
-        exclude: /node_modules/,
-        loader: 'ng-annotate-loader!babel-loader',
-        query: {
-          stage: 0
-        }
+        exclude: /(node_modules)/,
+        use: [
+          { loader: 'ng-annotate-loader' },
+          { loader: 'babel-loader' },
+        ]
       }
     ]
   }

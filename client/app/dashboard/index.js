@@ -1,11 +1,11 @@
 import angular from 'angular'
-import dashboardService from './dashboard.service'
-import dashboardController from './dashboard.controller'
-import dashboardApi from './dashboard.api' // What is this file for?
+import DashboardService from './dashboard.service'
+import DashboardController from './dashboard.controller'
+import DashboardApi from './dashboard.api' // What is this file for?
 import dashboardRoute from './dashboard.route'
 
 angular
     .module('app')
     .config(dashboardRoute)
-    .controller(dashboardController)
-    .service(dashboardService)
+    .controller('dashboardController', DashboardController)
+    .service('dashboardService', DashboardService)

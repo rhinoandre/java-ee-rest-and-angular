@@ -1,0 +1,9 @@
+{
+  "products" : [
+    {
+      "name": "Potato",
+      "description": "The food that Daniel love most",
+      "price": 333
+    }
+  ]
+}

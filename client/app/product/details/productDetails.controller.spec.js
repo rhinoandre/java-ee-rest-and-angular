@@ -15,7 +15,6 @@ describe('productDetails.controller', () => {
             'scope': scope,
             'product': product
         })
-
     }))
 
     describe('tets', () => {
